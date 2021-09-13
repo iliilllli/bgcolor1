@@ -22,6 +22,7 @@
   <button class="btn_toggle">배경색상변경 토글버튼</button>
   <button class="btn--reset">배경색상변경 리셋</button>
   <button class="btn--bggray">배경색상변경 그레이</button>
+  <button class="btn--img">이미지변경</button>
   
   
 </div>
@@ -34,12 +35,20 @@
     });
     const btnReset = document.querySelector('.btn--reset');
     btnReset.addEventListener('click', function(){
-      document.body.classList.remove('bgcolor--blue','bgcolor--gray');
+      document.body.classList.remove('bgcolor--blue','bgcolor--gray','.btn--img');
     });
 
     const btnBgGray = document.querySelector('.btn--bggray');
     btnBgGray.addEventListener('click', function(){
       document.body.classList.add('bgcolor--gray');
+    });
+
+    const btnImg = document.querySelector('.btn--img');
+    btnImg.addEventListener('click', function(){
+      document.body.style.backgroundImage = "url('https://t1.daumcdn.net/cfile/blog/2746DA5057424DF227')";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundSize = "1200px";
+      
     });
 
   </script>
