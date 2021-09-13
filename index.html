@@ -15,6 +15,9 @@
     .bgcolor--gray{
       background-color: lightgray;
     }
+    .bgcolor--img{
+      background-image: url(img/22.jpg);
+    }
   </style>
 </head>
 <body>
@@ -35,7 +38,7 @@
     });
     const btnReset = document.querySelector('.btn--reset');
     btnReset.addEventListener('click', function(){
-      document.body.classList.remove('bgcolor--blue','bgcolor--gray','.btn--img');
+      document.body.classList.remove('bgcolor--blue','bgcolor--gray','bgcolor--img');
     });
 
     const btnBgGray = document.querySelector('.btn--bggray');
@@ -45,9 +48,7 @@
 
     const btnImg = document.querySelector('.btn--img');
     btnImg.addEventListener('click', function(){
-      document.body.style.backgroundImage = "url('https://t1.daumcdn.net/cfile/blog/2746DA5057424DF227')";
-      document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundSize = "1200px";
+      document.body.classList.add('bgcolor--img');
       
     });
 
