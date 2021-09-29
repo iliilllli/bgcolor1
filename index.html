@@ -18,6 +18,17 @@
     .bgcolor--img{
       background-image: url(img/22.jpg);
     }
+    .bg__img {
+      margin: 0;
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      background:all 1s;
+      opacity: 0;
+    }
+    .bg__img--show {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -49,7 +60,7 @@
     const btnImg = document.querySelector('.btn--img');
     btnImg.addEventListener('click', function(){
       document.body.classList.add('bgcolor--img');
-      
+bgComtainer.classList.add('bg__img--show');
     });
 
   </script>
